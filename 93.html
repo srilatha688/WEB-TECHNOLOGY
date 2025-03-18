@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Double Click to Change Image</title>
+</head>
+<body>
+  <h1>Double click on the image to change it</h1>
+  <img id="image" src="download.webp" alt="initial image">
+
+  <script>
+    function changeImage() {
+      const image = document.getElementById("image");
+      const currentSrc = image.src;
+
+      if (currentSrc.includes("download.webp")) {
+        image.src = "z900.jpg";
+      } else {
+        image.src = "C:/Users/LAB2_SYS/Pictures/download.webp";
+      }
+    }
+
+    document.getElementById("image").addEventListener("dblclick", changeImage);
+  </script>
+</body>
+</html>
